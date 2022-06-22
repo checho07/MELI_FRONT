@@ -1,0 +1,10 @@
+@mixin font-face($name, $source) {
+    @font-face {
+        font-family: $name;
+        src: url($source);
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@include font-face('Proxma-Nova','../assets/fonts/Proxima-Nova-Font.otf' )

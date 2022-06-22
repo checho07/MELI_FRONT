@@ -1,0 +1,34 @@
+<app-search-box></app-search-box>
+<div class="container">
+    <div class="breadcrumb-container">
+        <app-breadcrumb class="breadcrubm-component"></app-breadcrumb> 
+    </div>
+    <div class="item-detail">
+
+           <section class="img-section">
+            <img class="item-img"  width="80%" src="{{itemData.item?.picture}}" alt="">
+           </section>
+
+           <aside>
+
+            <div>
+                <span class="item-sell">
+                   {{itemData.item?.condition}} {{itemData.item?.sold_quantity}} vendidos
+                 </span>
+                 <h1 class="item-name"> {{itemData.item?.title}}</h1>
+                <span class="item-price"> {{itemData.item?.price?.amount | currency : _currency :'symbol' }}</span>
+                <button class="btn-buy">Comprar</button>
+            </div>
+            
+           </aside>
+
+           <article class="description-section">
+            <span class="description-title">
+                Descpricion del producto
+            </span>
+            <p class="item-description">
+                {{itemData.item?.description}}
+            </p>
+           </article>
+    </div>
+</div>

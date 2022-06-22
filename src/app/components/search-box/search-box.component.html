@@ -1,0 +1,23 @@
+<nav class="navbar">
+
+    <div class="brand-logo-container">
+
+        <a href="" class="brand-logo"></a>
+    </div>
+
+    <div>
+        <div class="form-search"  role="search">
+     
+            <input  (keyup.enter)="queryItems()"  [(ngModel)]="queryText" type="text" class="search-input" aria-label="Buscar"  placeholder="Nunca dejes de buscar" maxlength="120" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="on"  value=""  >
+            <button  (click)="queryItems()"  class="btn-search">
+                
+                    <i class="material-icons">search</i>
+              
+            </button>
+        </div>
+    </div>
+
+</nav>
+
+
+

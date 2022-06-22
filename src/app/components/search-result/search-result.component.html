@@ -1,0 +1,31 @@
+<app-search-box></app-search-box>
+<div class="container">
+    <div class="breadcrumb-container">
+        <app-breadcrumb class="breadcrubm-component"></app-breadcrumb> 
+    </div>
+    <div *ngFor="let item of items" class="result-list-container">
+        
+            <div class="item-result-list" [routerLink]="['/items', item.id]" >
+                <div>
+                    <img width="90%" src="{{item.picture}}" alt="">
+                </div>
+
+                <div class="item-description">
+                    <div class="price-container">
+                        <span class="item-price">
+                            {{ item.price?.amount | currency : item.price.currency :'symbol' }}
+                          
+                        </span>
+                        <div *ngIf="item.free_shipping" class="cirlce-free-shipping"></div>
+
+                    </div>
+                   
+                    <p>
+                       {{item.title}}
+                    </p>
+                </div>
+                    <p>Estado: {{item.condition}}</p>
+            </div>
+    </div>
+</div>
+

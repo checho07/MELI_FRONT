@@ -1,0 +1,72 @@
+@import 'colors';
+@import 'responsive';
+@import 'neo';
+
+%container{
+    background-color: white !important;
+    width: 80%;
+    margin: 1px auto;
+    @include neo(2px, -1px);
+    @include movil(){width: 100%};
+}
+
+.container{
+    background-color:$secondary;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.breadcrumb-container{
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+
+.result-list-container{
+    @extend %container;
+}
+
+.item-result-list{
+    @include grid(3,1em);
+
+    &:hover{
+        cursor: pointer;
+    }
+    
+    padding: 15px;
+    p{
+        margin-top: 4vh;
+        text-align: center;
+    }
+
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+}
+
+.item-price{
+    font-size: 1.5em;
+}
+
+.cirlce-free-shipping{
+    width:15px ;
+    height:15px ;
+    background: $green;
+    border-radius: 50%;
+    margin-left: 2vw;
+}
+
+.item-description{
+    margin-top: 3vh;
+    text-align: left;
+
+    p{
+        margin-top: 10px;
+        text-align: left;
+    }
+}

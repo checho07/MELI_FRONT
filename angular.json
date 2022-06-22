@@ -31,9 +31,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              {"input":"src/styles.scss"},
+              {"input": "src/fonts.scss"}
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/theme"
+              ]
+            }
           },
           "configurations": {
             "production": {

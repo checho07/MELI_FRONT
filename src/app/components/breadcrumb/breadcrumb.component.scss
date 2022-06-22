@@ -1,0 +1,11 @@
+@import 'responsive';
+.path{
+    display: flex;
+    div{
+        width: fit-content;    
+    }
+
+    @include movil(){
+        flex-direction: column;
+    }
+}

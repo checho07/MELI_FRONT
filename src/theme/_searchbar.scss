@@ -1,0 +1,50 @@
+@import 'colors';
+@import 'responsive';
+@import 'neo';
+
+.navbar {
+    @include flexible(flex,row,wrap,center,center);
+    background-color: $brand_color;
+    height: fit-content;
+    padding: 8px;
+
+
+   
+
+}
+
+.brand-logo{
+   
+        width: 44px;
+        height: 32px;
+        display: block;
+        overflow: hidden;
+        margin-right: 2vw;
+        background: url(https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.9/mercadolibre/logo__small@2x.png) center/100% no-repeat ;
+   }
+
+
+ .form-search{
+
+     @include flexible(flex,row, wrap, center, inherit); 
+     @include neo(1px, 1px);
+   
+
+     .search-input{
+        border: none;
+        border-radius: 2px;
+        width: 60vw ;
+        padding: 5px;
+      
+     }
+    .btn-search{
+        border: none; 
+        color: $dark-gray;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+ }  
+
+
+
+
